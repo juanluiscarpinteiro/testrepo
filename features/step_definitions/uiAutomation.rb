@@ -18,10 +18,26 @@ Then(/^I click on "([^"]*)" button$/) do |button|
   click_button(button, wait:30)
 end
 
-Then(/^I get credentials from the UI$/) do |button|
-  username = page.find(:xpath, config['saucePage']['usermane'], wait:30).text
+Then(/^I get credentials from the UI$/) do
+  username= page.find(:xpath, config['saucePage']['usermane'], wait:30).text
+  usernameArray = username.split(" ")
   password= page.find(:xpath, config['saucePage']['password'], wait:30).text
-  puts "Username " +  username + " password " + password 
+  passwordArray = password.split(" ")
+  for username in usernameArray do
+      if username.include? "_"
+        @usernameFound = username
+        break
+      end
+  end
+  for password in passwordArray do
+    if password.include? "_"
+      @passwordFound = password
+      break
+    end
+  end
+  # puts @usernameFound
+  # puts @passwordFound
+
 end
 
 Then(/^I click on "([^"]*)" button$/) do |button|

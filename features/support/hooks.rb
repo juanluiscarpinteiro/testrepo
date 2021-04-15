@@ -1,0 +1,3 @@
+ 
+@usernameFound = nil
+@passwordFound =nil
