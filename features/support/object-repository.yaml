@@ -1,0 +1,5 @@
+# ########  Objects from UI ############
+
+saucePage:
+    usermane: ".//div[@id='login_credentials']"
+    password: "//div[@class = 'login_password']"
