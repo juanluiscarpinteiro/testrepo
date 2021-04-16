@@ -3,3 +3,11 @@
 saucePage:
     usermane: ".//div[@id='login_credentials']"
     password: "//div[@class = 'login_password']"
+    loginButton: ".//div//input[@name= 'login-button' ]"
+    usernamePlaceholderInput: ".//div//input[@placeholder = 'Username']"
+    passwordPlaceholderInput : ".//div//input[@placeholder = 'Password']"
+    addToCartButtons: "//button[contains(text(),'Add to cart')]"
+    cartIcon: ".//div//a[@class ='shopping_cart_link']"
+    titleHeader: ".//div//span[contains(text(),'HEADER')]"
+    infoInputGeneric : ".//input[@name = 'ENTERINFO']"
+    thankYouMessage : ".//div//h2[contains(text(),'MESSAGE')]"
